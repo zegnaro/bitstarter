@@ -6,7 +6,7 @@ var buffer = require('buffer');
 var fs = require('fs');
 
 app.get('/', function(request, response) {
-    var data = fs.readFileSync('./bitstarter/index.html');
+    var data = fs.readFileSync('index.html');
     var buf = new Buffer(data.length);
     response.send(buf.toString('utf8', 0, data.length));
 });
